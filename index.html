@@ -11,10 +11,7 @@
     >
 
     <style>
-        /* =========================================================
-           RESET
-        ========================================================= */
-
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
@@ -41,25 +38,19 @@
             font: inherit;
         }
 
-        /* =========================================================
-           VARIÁVEIS
-        ========================================================= */
-
+        /* VARIÁVEIS */
         :root {
             --black: #080808;
             --dark: #111111;
             --dark-2: #181818;
             --white: #f5f5f5;
             --gray: #a8a8a8;
-            --line: rgba(255,255,255,.12);
+            --line: rgba(255, 255, 255, .12);
             --accent: #c7a76c;
             --accent-light: #e0c58c;
         }
 
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
+        /* HEADER */
         header {
             position: fixed;
             top: 0;
@@ -70,18 +61,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,.75),
+                rgba(0, 0, 0, .75),
                 transparent
             );
-
             transition: .3s ease;
         }
 
         header.scrolled {
-            background: rgba(8,8,8,.95);
+            background: rgba(8, 8, 8, .95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--line);
         }
@@ -124,31 +113,25 @@
             cursor: pointer;
         }
 
-        /* =========================================================
-           HERO
-        ========================================================= */
-
+        /* HERO */
         .hero {
             min-height: 100vh;
             position: relative;
-
             display: flex;
             align-items: flex-end;
-
             background-image:
                 linear-gradient(
                     90deg,
-                    rgba(0,0,0,.82) 0%,
-                    rgba(0,0,0,.45) 45%,
-                    rgba(0,0,0,.10) 100%
+                    rgba(0, 0, 0, .82) 0%,
+                    rgba(0, 0, 0, .45) 45%,
+                    rgba(0, 0, 0, .10) 100%
                 ),
                 linear-gradient(
                     0deg,
-                    rgba(0,0,0,.85) 0%,
+                    rgba(0, 0, 0, .85) 0%,
                     transparent 55%
                 ),
                 url("fcapa.jpeg");
-
             background-size: cover;
             background-position: center center;
         }
@@ -194,23 +177,17 @@
             flex-wrap: wrap;
         }
 
-        /* =========================================================
-           BOTÕES
-        ========================================================= */
-
+        /* BOTÕES */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-
             padding: 15px 25px;
-
             border: 1px solid var(--line);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 12px;
-
             cursor: pointer;
             transition: .3s ease;
         }
@@ -227,7 +204,7 @@
         }
 
         .btn-outline {
-            background: rgba(0,0,0,.35);
+            background: rgba(0, 0, 0, .35);
             backdrop-filter: blur(5px);
         }
 
@@ -236,10 +213,7 @@
             color: var(--accent);
         }
 
-        /* =========================================================
-           ATALHOS
-        ========================================================= */
-
+        /* ATALHOS */
         .shortcuts {
             background: #0d0d0d;
             border-top: 1px solid var(--line);
@@ -272,14 +246,11 @@
             width: 42px;
             height: 42px;
             margin: 0 auto 12px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border: 1px solid var(--accent);
             border-radius: 50%;
-
             color: var(--accent);
             font-size: 18px;
         }
@@ -296,10 +267,7 @@
             color: #888;
         }
 
-        /* =========================================================
-           SEÇÕES
-        ========================================================= */
-
+        /* SEÇÕES */
         section {
             padding: 110px 6%;
         }
@@ -329,10 +297,7 @@
             max-width: 650px;
         }
 
-        /* =========================================================
-           SOBRE
-        ========================================================= */
-
+        /* SOBRE */
         .about {
             background: #101010;
         }
@@ -350,23 +315,19 @@
         }
 
         .about-image img {
-    width: 100%;
-    display: block;
-}
-
+            width: 100%;
+            display: block;
+        }
 
         .about-image::after {
             content: "";
             position: absolute;
             inset: 15px;
-            border: 1px solid rgba(199,167,108,.4);
+            border: 1px solid rgba(199, 167, 108, .4);
             pointer-events: none;
         }
 
-        /* =========================================================
-           SERVIÇOS
-        ========================================================= */
-
+        /* SERVIÇOS */
         .services {
             background: var(--black);
         }
@@ -414,22 +375,17 @@
             font-size: 18px;
         }
 
-        /* =========================================================
-           EXPERIÊNCIA
-        ========================================================= */
-
+        /* EXPERIÊNCIA */
         .experience {
             background:
                 linear-gradient(
-                    rgba(0,0,0,.75),
-                    rgba(0,0,0,.9)
+                    rgba(0, 0, 0, .75),
+                    rgba(0, 0, 0, .9)
                 ),
                 url("fcapa.jpeg");
-
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-
             text-align: center;
         }
 
@@ -450,10 +406,7 @@
             margin-bottom: 35px;
         }
 
-        /* =========================================================
-           LOCALIZAÇÃO
-        ========================================================= */
-
+        /* LOCALIZAÇÃO */
         .location {
             background: #101010;
         }
@@ -493,32 +446,23 @@
         }
 
         .map {
-    min-height: 350px;
+            min-height: 350px;
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, .45),
+                    rgba(0, 0, 0, .75)
+                ),
+                url("mapa.jpeg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid var(--line);
+        }
 
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.75)
-        ),
-        url("mapa.jpeg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    border: 1px solid var(--line);
-}
-
-
-        /* =========================================================
-           CTA
-        ========================================================= */
-
+        /* CTA */
         .cta {
             padding: 100px 6%;
             text-align: center;
@@ -547,10 +491,7 @@
             background: #252525;
         }
 
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
+        /* FOOTER */
         footer {
             background: #050505;
             padding: 60px 6% 30px;
@@ -559,7 +500,6 @@
         .footer-grid {
             max-width: 1200px;
             margin: auto;
-
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 50px;
@@ -592,32 +532,22 @@
             justify-content: space-between;
         }
 
-        /* =========================================================
-           WHATSAPP FLUTUANTE
-        ========================================================= */
-
+        /* WHATSAPP FLUTUANTE */
         .whatsapp {
             position: fixed;
             right: 25px;
             bottom: 25px;
             z-index: 999;
-
             width: 58px;
             height: 58px;
-
             border-radius: 50%;
-
             background: #25D366;
             color: white;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-size: 24px;
-
-            box-shadow: 0 8px 30px rgba(0,0,0,.4);
-
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
             transition: .3s;
         }
 
@@ -625,12 +555,8 @@
             transform: scale(1.08);
         }
 
-        /* =========================================================
-           RESPONSIVO
-        ========================================================= */
-
+        /* RESPONSIVO */
         @media (max-width: 850px) {
-
             header {
                 padding: 18px 5%;
             }
@@ -640,12 +566,10 @@
                 top: 70px;
                 left: 0;
                 width: 100%;
-
                 display: none;
                 flex-direction: column;
                 gap: 0;
-
-                background: rgba(8,8,8,.97);
+                background: rgba(8, 8, 8, .97);
                 border-bottom: 1px solid var(--line);
             }
 
@@ -713,7 +637,6 @@
         }
 
         @media (max-width: 500px) {
-
             section {
                 padding: 80px 6%;
             }
@@ -758,17 +681,22 @@
                 white-space: nowrap;
             }
         }
-    </style>
+    .shortcut-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}</style>
 </head>
 
 <body>
 
-    <!-- =========================================================
-         HEADER
-    ========================================================== -->
-
+    <!-- HEADER -->
     <header id="header">
-
         <a href="#inicio" class="logo">
             JERÔNIMO <span>PRO</span>
         </a>
@@ -783,20 +711,13 @@
         <button class="menu-button" id="menuButton">
             ☰
         </button>
-
     </header>
-
-
-    <!-- =========================================================
-         HERO
-    ========================================================== -->
 
     <main>
 
+        <!-- HERO -->
         <section class="hero" id="inicio">
-
             <div class="hero-content">
-
                 <div class="eyebrow">
                     Barbearia & Estilo
                 </div>
@@ -813,112 +734,101 @@
                 </p>
 
                 <div class="hero-buttons">
-
                     <a
-    href="https://wa.me/5561981818520"
+    href="https://calendar.app.google/6C74cs5iJsb2v6oYA"
     target="_blank"
-    class="btn btn-primary"
+    rel="noopener noreferrer"
+    class="btn"
 >
                         ✦ Agendar horário
                     </a>
 
-                    <a
-                        href="#servicos"
-                        class="btn btn-outline"
-                    >
+                    <a href="#servicos" class="btn btn-outline">
                         Ver serviços
                     </a>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             ATALHOS
-        ====================================================== -->
-
+        <!-- ATALHOS: ORDEM ATUALIZADA -->
         <section class="shortcuts">
-
             <div class="shortcut-grid">
 
-                <a
-                    href="#agendamento"
-                    class="shortcut"
-                >
+                <!-- 1. AGENDAMENTO -->
+                <a href="#agendamento" class="shortcut">
                     <div class="shortcut-icon">✦</div>
-                    <strong>Agendar</strong>
+                    <strong>Agendamento</strong>
                     <small>Reserve seu horário</small>
                 </a>
 
+                <!-- 2. ENDEREÇO -->
+<a href="#localizacao" class="shortcut">
+    <div class="shortcut-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+        </svg>
+    </div>
+    <strong>Endereço</strong>
+    <small>Onde estamos</small>
+</a>
 
-                <!-- TROQUE O NÚMERO PELO WHATSAPP REAL -->
-
-                <a
-                    href="https://wa.me/556181818520"
-                    target="_blank"
-                    class="shortcut"
-                >
-                    <div class="shortcut-icon">◉</div>
-                    <strong>WhatsApp</strong>
-                    <small>Fale conosco</small>
-                </a>
-
-
-                <a
-                    href="#localizacao"
-                    class="shortcut"
-                >
-                    <div class="shortcut-icon">⌖</div>
-                    <strong>Endereço</strong>
-                    <small>Onde estamos</small>
-                </a>
-
-
-                <!-- TROQUE PELO INSTAGRAM REAL -->
-
-                <a
-                    href="https://www.instagram.com/jeronimopro_?stkn=bjA2YXA1NWVzajFk&utm_source=qr"
-                    target="_blank"
-                    class="shortcut"
-                >
-                    <div class="shortcut-icon">◎</div>
-                    <strong>Instagram</strong>
-                    <small>Siga nosso trabalho</small>
-                </a>
-
-
-                <!-- TROQUE O ENDEREÇO NA FUNÇÃO ABAIXO -->
-
-              <a
-    href="https://loja.infinitepay.io/jeronimopro"
+<!-- 3. INSTAGRAM -->
+<a
+    href="https://www.instagram.com/jeronimopro_/"
     target="_blank"
     rel="noopener noreferrer"
     class="shortcut"
 >
-    <div class="shortcut-icon">🛍</div>
-    <strong>Loja Online</strong>
-    <small>Comprar online</small>
+    <div class="shortcut-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+            />
+        </svg>
+    </div>
+    <strong>Instagram</strong>
+    <small>Siga nosso trabalho</small>
 </a>
 
+                <!-- 4. LOJA ONLINE -->
+                <a
+                    href="https://loja.infinitepay.io/jeronimopro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="shortcut"
+                >
+                    <div class="shortcut-icon">🛍</div>
+                    <strong>Loja Online</strong>
+                    <small>Comprar online</small>
+                </a>
+
+                <!-- 5. AVALIAR NO GOOGLE -->
+                <!-- Substitua pelo link direto de avaliação quando disponível. -->
+                <a
+                    href="https://g.page/r/Caotd_s3wF_qECE/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="shortcut"
+                >
+                    <div class="shortcut-icon">★</div>
+                    <strong>Avaliar no Google</strong>
+                    <small>Conte sua experiência</small>
+                </a>
 
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             SOBRE
-        ====================================================== -->
-
+        <!-- SOBRE -->
         <section class="about" id="sobre">
-
             <div class="container">
-
                 <div class="about-grid">
-
                     <div class="about-image">
                         <img
                             src="conceito.jpeg"
@@ -927,7 +837,6 @@
                     </div>
 
                     <div>
-
                         <div class="section-label">
                             O conceito
                         </div>
@@ -945,28 +854,16 @@
                             acabamento final, o objetivo é entregar uma
                             experiência personalizada e consistente.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             SERVIÇOS
-        ====================================================== -->
-
+        <!-- SERVIÇOS -->
         <section class="services" id="servicos">
-
             <div class="container">
-
                 <div class="services-header">
-
                     <div>
-
                         <div class="section-label">
                             Serviços
                         </div>
@@ -974,21 +871,16 @@
                         <h2 class="section-title">
                             O que fazemos
                         </h2>
-
                     </div>
 
                     <p class="section-text">
                         Serviços personalizados de acordo com seu estilo
                         e preferência.
                     </p>
-
                 </div>
 
-
                 <div class="service-list">
-
                     <div class="service">
-
                         <div class="service-info">
                             <h3>Corte masculino</h3>
                             <p>Corte personalizado + acabamento</p>
@@ -997,12 +889,9 @@
                         <div class="service-price">
                             R$ 30
                         </div>
-
                     </div>
 
-
                     <div class="service">
-
                         <div class="service-info">
                             <h3>Barba</h3>
                             <p>Modelagem e acabamento</p>
@@ -1011,12 +900,9 @@
                         <div class="service-price">
                             R$ 30
                         </div>
-
                     </div>
 
-
                     <div class="service">
-
                         <div class="service-info">
                             <h3>Corte + Barba</h3>
                             <p>Experiência completa</p>
@@ -1025,12 +911,9 @@
                         <div class="service-price">
                             R$ 55
                         </div>
-
                     </div>
 
-
                     <div class="service">
-
                         <div class="service-info">
                             <h3>Quick Massage</h3>
                             <p>Consulte disponibilidade</p>
@@ -1039,24 +922,14 @@
                         <div class="service-price">
                             R$ 45
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             EXPERIÊNCIA
-        ====================================================== -->
-
+        <!-- EXPERIÊNCIA -->
         <section class="experience">
-
             <div class="experience-content">
-
                 <div class="section-label">
                     A experiência
                 </div>
@@ -1071,30 +944,17 @@
                     sentindo que cada detalhe foi feito sob medida.
                 </p>
 
-                <a
-                    href="#agendamento"
-                    class="btn btn-primary"
-                >
+                <a href="#agendamento" class="btn btn-primary">
                     Agendar agora
                 </a>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             LOCALIZAÇÃO
-        ====================================================== -->
-
+        <!-- LOCALIZAÇÃO -->
         <section class="location" id="localizacao">
-
             <div class="container">
-
                 <div class="location-grid">
-
                     <div class="location-card">
-
                         <div class="section-label">
                             Localização
                         </div>
@@ -1103,54 +963,40 @@
                             Onde estamos
                         </h2>
 
-
                         <div class="location-item">
-
                             <span>Endereço</span>
 
-                            <!-- ALTERE AQUI -->
-
                             <strong>
-                                QR 412 conjunto 01 lote 18 loja 01 - Samambaia Norte, Brasília - DF, 72320-101
+                                QR 412 conjunto 01 lote 18 loja 01 -
+                                Samambaia Norte, Brasília - DF, 72320-101
                             </strong>
-
                         </div>
 
-
                         <div class="location-item">
-
                             <span>Horário</span>
 
                             <strong>
                                 Segunda a quinta: 17:30h às 21:30h<br>
                                 Domingo: 09h às 13h
                             </strong>
-
                         </div>
 
-
                         <div class="location-item">
-
                             <span>Contato</span>
 
                             <strong>
                                 (61) 98181-8520
                             </strong>
-
                         </div>
-
                     </div>
 
-
                     <div class="map">
-
                         <div>
-
                             <div class="section-label">
                                 Uma simples barbearia. Para pessoas especiais.
                             </div>
 
-                            <h3 style="margin-bottom:20px;">
+                            <h3 style="margin-bottom: 20px;">
                                 Venha nos visitar
                             </h3>
 
@@ -1161,24 +1007,14 @@
                             >
                                 Como chegar →
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =====================================================
-             AGENDAMENTO
-        ====================================================== -->
-
+        <!-- AGENDAMENTO -->
         <section class="cta" id="agendamento">
-
             <h2>
                 Nosso destino<br>
                 É a excelência.
@@ -1188,42 +1024,29 @@
                 É um privilégio ter a sua confiança para cuidar do seu estilo.
             </p>
 
-            <!-- ALTERE PELO LINK DO SEU SISTEMA DE AGENDAMENTO -->
-
             <a
-                href="https://wa.me/5561981818520?text=Ol%C3%A1%21+Gostaria+de+agendar+meu+hor%C3%A1rio+e+viver+essa+experi%C3%AAncia.+%E2%9C%A8&utm_source=chatgpt.com"
+                href="https://wa.me/5561981818520?text=Ol%C3%A1%21+Gostaria+de+agendar+meu+hor%C3%A1rio+e+viver+essa+experi%C3%AAncia.+%E2%9C%A8&amp;utm_source=chatgpt.com"
                 target="_blank"
                 class="btn"
             >
                 Agendar horário
             </a>
-
         </section>
 
     </main>
 
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-
+    <!-- FOOTER -->
     <footer>
-
         <div class="footer-grid">
-
             <div>
-
                 <h3>JERÔNIMO PRO</h3>
 
                 <p>
                     Atendimento personalizado.
                 </p>
-
             </div>
 
-
             <div>
-
                 <h3>Navegação</h3>
 
                 <p>
@@ -1241,12 +1064,9 @@
                 <p>
                     <a href="#localizacao">Localização</a>
                 </p>
-
             </div>
 
-
             <div>
-
                 <h3>Contato</h3>
 
                 <p>
@@ -1256,18 +1076,14 @@
                 </p>
 
                 <p>
-                    <a href="https://www.instagram.com/jeronimopro_?stkn=bjA2YXA1NWVzajFk&utm_source=qr">
+                    <a href="https://www.instagram.com/jeronimopro_?stkn=bjA2YXA1NWVzajFk&amp;utm_source=qr">
                         Instagram
                     </a>
                 </p>
-
             </div>
-
         </div>
 
-
         <div class="footer-bottom">
-
             <div>
                 © 2026 Jerônimo Pro. Todos os direitos reservados.
             </div>
@@ -1275,16 +1091,10 @@
             <div>
                 Desenvolvido com estilo.
             </div>
-
         </div>
-
     </footer>
 
-
-    <!-- =========================================================
-         WHATSAPP FLUTUANTE
-    ========================================================== -->
-
+    <!-- WHATSAPP FLUTUANTE -->
     <a
         href="https://wa.me/5561981818520"
         target="_blank"
@@ -1294,34 +1104,20 @@
         ◉
     </a>
 
-
-    <!-- =========================================================
-         JAVASCRIPT
-    ========================================================== -->
-
+    <!-- JAVASCRIPT -->
     <script>
-
-        /* =====================================================
-           HEADER AO ROLAR
-        ====================================================== */
-
+        /* HEADER AO ROLAR */
         const header = document.getElementById("header");
 
         window.addEventListener("scroll", () => {
-
             if (window.scrollY > 50) {
                 header.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
             }
-
         });
 
-
-        /* =====================================================
-           MENU MOBILE
-        ====================================================== */
-
+        /* MENU MOBILE */
         const menuButton = document.getElementById("menuButton");
         const nav = document.getElementById("nav");
 
@@ -1329,26 +1125,12 @@
             nav.classList.toggle("active");
         });
 
-
-        /* Fecha o menu quando clicar em um link */
-
+        /* FECHA O MENU QUANDO CLICAR EM UM LINK */
         document.querySelectorAll("nav a").forEach(link => {
-
             link.addEventListener("click", () => {
                 nav.classList.remove("active");
             });
-
         });
-
-
-        /* =====================================================
-           GOOGLE MAPS
-           
-           ALTERE O ENDEREÇO ABAIXO PELO ENDEREÇO REAL
-        ====================================================== */
-
-       
-
     </script>
 
 </body>
