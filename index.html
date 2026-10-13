@@ -76,14 +76,49 @@
         }
 
         .logo {
-            font-size: 18px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 600;
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            text-transform: none;
         }
 
-        .logo span {
+        .logo-imagem {
+            width: 54px;
+            height: 54px;
+            display: block;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .logo-texto {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .logo-nome {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+        .logo-nome span,
+        .logo-subtitulo {
             color: var(--accent);
+        }
+
+        .logo-subtitulo {
+            font-size: 9px;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
 
         nav {
@@ -637,6 +672,12 @@
         }
 
         @media (max-width: 500px) {
+            .logo { gap: 8px; }
+            .logo-imagem { width: 38px; height: 38px; }
+            .logo-nome { font-size: 12px; letter-spacing: 2px; }
+            .logo-subtitulo { font-size: 8px; letter-spacing: 2px; }
+            .menu-button { padding: 8px; }
+
             section {
                 padding: 80px 6%;
             }
@@ -697,8 +738,12 @@
 
     <!-- HEADER -->
     <header id="header">
-        <a href="#inicio" class="logo">
-            JERÔNIMO <span>PRO</span>
+        <a href="#inicio" class="logo" aria-label="Jerônimo Pro Hair Style - início">
+            <img src="logo.png" alt="" class="logo-imagem" width="54" height="54">
+            <span class="logo-texto">
+                <span class="logo-nome">JERÔNIMO <span>PRO</span></span>
+                <span class="logo-subtitulo">Hair Style</span>
+            </span>
         </a>
 
         <nav id="nav">
@@ -708,7 +753,7 @@
             <a href="#localizacao">Localização</a>
         </nav>
 
-        <button class="menu-button" id="menuButton">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
             ☰
         </button>
     </header>
@@ -755,7 +800,7 @@
             <div class="shortcut-grid">
 
                 <!-- 1. AGENDAMENTO -->
-                <a href="#agendamento" class="shortcut">
+                <a href="https://loja.infinitepay.io/jeronimopro?categories=" target="_blank" rel="noopener noreferrer" class="shortcut">
                     <div class="shortcut-icon">✦</div>
                     <strong>Agendamento</strong>
                     <small>Reserve seu horário</small>
@@ -810,7 +855,7 @@
                 </a>
 
                 <!-- 5. AVALIAR NO GOOGLE -->
-                <!-- Substitua pelo link direto de avaliação quando disponível. -->
+                <!-- Link direto de avaliação no Google -->
                 <a
                     href="https://g.page/r/Caotd_s3wF_qECE/review"
                     target="_blank"
@@ -832,7 +877,7 @@
                     <div class="about-image">
                         <img
                             src="conceito.jpeg"
-                            alt="Profissional"
+                            alt="Ambiente e conceito Jerônimo Pro" loading="lazy" decoding="async"
                         >
                     </div>
 
@@ -944,7 +989,7 @@
                     sentindo que cada detalhe foi feito sob medida.
                 </p>
 
-                <a href="#agendamento" class="btn btn-primary">
+                <a href="https://loja.infinitepay.io/jeronimopro?categories=" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     Agendar agora
                 </a>
             </div>
@@ -1003,6 +1048,7 @@
                             <a
                                 href="https://maps.app.goo.gl/BsDLFdSHdZrooS6f8"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 class="shortcut"
                             >
                                 Como chegar →
@@ -1027,6 +1073,7 @@
             <a
                 href="https://loja.infinitepay.io/jeronimopro?categories="
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn"
             >
                 Agendar horário
@@ -1133,13 +1180,17 @@
         const nav = document.getElementById("nav");
 
         menuButton.addEventListener("click", () => {
-            nav.classList.toggle("active");
+            const isOpen = nav.classList.toggle("active");
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
         });
 
         /* FECHA O MENU QUANDO CLICAR EM UM LINK */
         document.querySelectorAll("nav a").forEach(link => {
             link.addEventListener("click", () => {
                 nav.classList.remove("active");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Abrir menu");
             });
         });
     </script>
