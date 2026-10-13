@@ -731,7 +731,26 @@
     stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-}</style>
+}
+        /* LOGO HORIZONTAL: substitui a marca antiga sem alterar o restante do site */
+        header .logo {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            min-width: 0;
+            line-height: 1;
+        }
+        header .logo-horizontal {
+            display: block;
+            width: clamp(190px, 24vw, 285px);
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        @media (max-width: 500px) {
+            header .logo-horizontal { width: 195px; }
+        }
+    </style>
 </head>
 
 <body>
@@ -739,11 +758,7 @@
     <!-- HEADER -->
     <header id="header">
         <a href="#inicio" class="logo" aria-label="Jerônimo Pro Hair Style - início">
-            <img src="logo.png" alt="" class="logo-imagem" width="54" height="54">
-            <span class="logo-texto">
-                <span class="logo-nome">JERÔNIMO <span>PRO</span></span>
-                <span class="logo-subtitulo">Hair Style</span>
-            </span>
+            <img src="logo-horizontal.png" alt="Jerônimo Pro Hair Style" class="logo-horizontal" width="1290" height="320">
         </a>
 
         <nav id="nav">
